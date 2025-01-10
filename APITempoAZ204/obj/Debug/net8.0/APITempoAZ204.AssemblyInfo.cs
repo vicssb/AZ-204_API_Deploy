@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APITempoAZ204")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d28193be713d15c82b0539e4c4e288cdebe402e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b079bc58d25a373130016cffaffdcaade460b35f")]
 [assembly: System.Reflection.AssemblyProductAttribute("APITempoAZ204")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APITempoAZ204")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
