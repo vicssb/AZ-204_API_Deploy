@@ -1,6 +1,6 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
+# Pipeline inicial
+# Comece com um pipeline mínimo que você pode personalizar para compilar e implantar seu código.
+# Adicione etapas que compilam, executam testes, implantam e muito mais:
 # https://aka.ms/yaml
 
 trigger:
@@ -29,4 +29,12 @@ steps:
   displayName: 'Compilar Solução'
 
 - script: dotnet test $(solution) --configuration $(buildConfiguration) --no-build --collect:"xPlat Code Coverage"
-  displayName: 'Compilar Solução'
+  displayName: 'Testar Solução'
+
+- task: Docker@2
+  displayName: 'Construir e Enviar Imagem Docker'
+  inputs:
+    containerRegistry: 'acrapiaz204vicssb'
+    repository: 'api-az-204'
+    command: 'buildAndPush'
+    Dockerfile: './APITempoAZ204/Dockerfile'
