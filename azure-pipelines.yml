@@ -11,14 +11,19 @@ pool:
 
 variables:
   solution: '*.sln'
-  buildPlatarfom: 'Any CPU'
+  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- task: UseDotNet@2
+  displayName: 'Instalar .NET SDK'
+  inputs: 
+    packageType: 'sdk'
+    version: '8.x'
+
+- script: dotnet restore $(solution)
+  displayName: 'Restaurar Solução'
+
+- script: dotnet build $(solution) --configuration $(buildConfiguration)
+  displayName: 'Compilar Solução'
