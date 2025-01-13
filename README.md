@@ -1,20 +1,49 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+I have gathered the repository details. Here is a draft README for your repository:
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+---
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# AZ-204_API_Deploy
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+This repository contains code and resources for deploying an API using C# and Docker. 
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Table of Contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+This project aims to provide a comprehensive guide and implementation for deploying an API using C#. The repository includes all necessary files and configurations to get started quickly.
+
+## Installation
+To install and set up this project locally, follow the steps below:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/vicssb/AZ-204_API_Deploy.git
+    cd AZ-204_API_Deploy
+    ```
+
+2. Build the Docker image:
+    ```bash
+    docker build -t az-204_api_deploy .
+    ```
+
+3. Run the Docker container:
+    ```bash
+    docker run -d -p 8080:80 az-204_api_deploy
+    ```
+
+## Usage
+Once the API is running, you can access it at `http://localhost:8080`. Detailed usage instructions and API endpoints will be added here.
+
+## Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure your code follows the project's coding guidelines and includes appropriate tests.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+---
+
+Would you like to add any specific details or sections to this README?
